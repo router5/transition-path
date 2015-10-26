@@ -1,3 +1,8 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
 function transitionPath(toState, fromState) {
     function nameToIDs(name) {
         return name.split('.').reduce(function (ids, name) {
@@ -5,7 +10,7 @@ function transitionPath(toState, fromState) {
         }, []);
     }
 
-    var i;
+    var i = undefined;
     var fromStateIds = fromState ? nameToIDs(fromState.name) : [];
     var toStateIds = nameToIDs(toState.name);
     var maxI = Math.min(fromStateIds.length, toStateIds.length);
@@ -19,7 +24,7 @@ function transitionPath(toState, fromState) {
     }
 
     var toDeactivate = fromStateIds.slice(i).reverse();
-    var toActivate   = toStateIds.slice(i);
+    var toActivate = toStateIds.slice(i);
     var intersection = fromState && i > 0 ? fromStateIds[i - 1] : '';
 
     return {
@@ -29,4 +34,5 @@ function transitionPath(toState, fromState) {
     };
 }
 
-module.exports = transitionPath;
+exports['default'] = transitionPath;
+module.exports = exports['default'];

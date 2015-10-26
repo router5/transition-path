@@ -2,8 +2,9 @@
   "name": "router5.transition-path",
   "version": "1.0.0",
   "description": "Router5 transition path helper function",
-  "main": "index.js",
+  "main": "dist/commonjs/index.js",
   "scripts": {
+    "build": "gulp build",
     "test": "_mocha"
   },
   "repository": {
@@ -22,6 +23,16 @@
   "homepage": "https://router5.github.io",
   "devDependencies": {
     "mocha": "^2.3.3",
-    "should": "^7.1.1"
+    "should": "^7.1.1",
+    "babel": "^5.8.19",
+    "babel-eslint": "^3.1.26",
+    "del": "^2.0.2",
+    "eslint": "^0.24.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.3.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2",
+    "run-sequence": "^1.1.4"
   }
 }
