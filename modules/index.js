@@ -1,25 +1,58 @@
-function transitionPath(toState, fromState) {
-    function nameToIDs(name) {
-        return name.split('.').reduce(function (ids, name) {
-            return ids.concat(ids.length ? ids[ids.length - 1] + '.' + name : name);
-        }, []);
-    }
+function nameToIDs(name) {
+    return name.split('.').reduce(function (ids, name) {
+        return ids.concat(ids.length ? ids[ids.length - 1] + '.' + name : name);
+    }, []);
+}
 
-    let i;
+function extractSegmentParams(name, state) {
+    if (!state._meta || !state._meta[name]) return {};
+
+    return Object.keys(state._meta[name]).reduce((params, p) => {
+        params[p] = state.params[p];
+        return params;
+    }, {});
+}
+
+function transitionPath(toState, fromState) {
     const fromStateIds = fromState ? nameToIDs(fromState.name) : [];
     const toStateIds = nameToIDs(toState.name);
     const maxI = Math.min(fromStateIds.length, toStateIds.length);
 
-    if (fromState && fromState.name === toState.name) {
-        i = Math.max(maxI - 1, 0);
-    } else {
+    function pointOfDifference() {
+        let i;
         for (i = 0; i < maxI; i += 1) {
-            if (fromStateIds[i] !== toStateIds[i]) break;
+            const left = fromStateIds[i];
+            const right = toStateIds[i];
+
+            if (left !== right) return i;
+
+            const leftParams = extractSegmentParams(left, toState);
+            const rightParams = extractSegmentParams(right, fromState);
+
+            if (leftParams.length !== rightParams.length) return i;
+            if (leftParams.length === 0) continue;
+
+            const different = Object.keys(leftParams).some(p => rightParams[p] !== leftParams[p]);
+            if (different) {
+                return i;
+            }
         }
+
+        return i;
     }
+
+    let i;
+    if (!fromState || toState.name === fromState.name && (!toState._meta || !fromState._meta)) {
+        console.log('[router5.transition-path] Some states are missing metadata, reloading all segments');
+        i = 0;
+    } else {
+        i = pointOfDifference();
+    }
+
 
     const toDeactivate = fromStateIds.slice(i).reverse();
     const toActivate   = toStateIds.slice(i);
+
     const intersection = fromState && i > 0 ? fromStateIds[i - 1] : '';
 
     return {
