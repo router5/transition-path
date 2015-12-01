@@ -42,7 +42,9 @@ function transitionPath(toState, fromState) {
     }
 
     let i;
-    if (!fromState || toState.name === fromState.name && (!toState._meta || !fromState._meta)) {
+    if (!fromState) {
+        i = 0;
+    } else if (!fromState || toState.name === fromState.name && (!toState._meta || !fromState._meta)) {
         console.log('[router5.transition-path] Some states are missing metadata, reloading all segments');
         i = 0;
     } else {
