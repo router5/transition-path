@@ -1,6 +1,6 @@
 {
   "name": "router5.transition-path",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Router5 transition path helper function",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "modules/index.js",
@@ -25,6 +25,7 @@
   "homepage": "https://router5.github.io",
   "devDependencies": {
     "babel-core": "^6.3.26",
+    "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-transform-class-properties": "^6.3.13",
     "babel-plugin-transform-export-extensions": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
