@@ -1,0 +1,54 @@
+<a name="2.0.4"></a>
+## [2.0.4](https://github.com/router5/transition-path/compare/v2.0.3...v2.0.4) (2016-01-05)
+
+
+
+
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/router5/transition-path/compare/v2.0.2...v2.0.3) (2016-01-05)
+
+
+### Bug Fixes
+
+* missing babel presets and plugins ([476496b](https://github.com/router5/transition-path/commit/476496b)), closes [#1](https://github.com/router5/transition-path/issues/1)
+
+
+
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/router5/transition-path/compare/v2.0.1...v2.0.2) (2016-01-04)
+
+
+
+
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/router5/transition-path/compare/v2.0.0...v2.0.1) (2015-12-01)
+
+
+### Bug Fixes
+
+* issue when fromState is null ([4baf622](https://github.com/router5/transition-path/commit/4baf622))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/router5/transition-path/compare/v1.0.1...v2.0.0) (2015-12-01)
+
+
+### Features
+
+* compare states using state metadata ([b8a47f9](https://github.com/router5/transition-path/commit/b8a47f9))
+
+
+
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/router5/transition-path/compare/v1.0.0...v1.0.1) (2015-10-26)
+
+
+
+
+<a name="1.0.0"></a>
+# 1.0.0 (2015-10-26)
+
+
+
+
