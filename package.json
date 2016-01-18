@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && babel modules --out-dir dist/commonjs",
-    "clog": "conventional-changelog -p angular -i CHANGELOG.md -w -a",
+    "clog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "test": "_mocha"
   },
   "repository": {

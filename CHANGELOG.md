@@ -62,25 +62,3 @@
 
 <a name="1.0.0"></a>
 # 1.0.0 (2015-10-26)
-
-
-
-
-<a name="3.0.0"></a>
-# 3.0.0 (2016-01-18)
-
-
-### feat
-
-* feat: export nameToIDs function ([24ea0ca](https://github.com/router5/transition-path/commit/24ea0ca))
-
-### test
-
-* test: update tests ([604f3a5](https://github.com/router5/transition-path/commit/604f3a5))
-
-
-### BREAKING CHANGE
-
-* when using ES5, transitionPath is now available under 'default'
-
-
