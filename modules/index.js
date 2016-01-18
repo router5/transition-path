@@ -1,4 +1,4 @@
-function nameToIDs(name) {
+export function nameToIDs(name) {
     return name.split('.').reduce(function (ids, name) {
         return ids.concat(ids.length ? ids[ids.length - 1] + '.' + name : name);
     }, []);
