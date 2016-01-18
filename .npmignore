@@ -1,2 +1,6 @@
+**/.*
 node_modules
-.babelrc
+npm-debug.log
+test
+README.md
+CHANGELOG.md
