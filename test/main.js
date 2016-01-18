@@ -1,6 +1,6 @@
 require('should');
 require('mocha');
-var transitionPath = require('../dist/commonjs');
+var transitionPath = require('../dist/commonjs').default;
 
 describe('router5.transition-path', function () {
     it('should return a transition path with from null state', function () {
