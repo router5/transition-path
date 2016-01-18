@@ -1,3 +1,13 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/router5/transition-path/compare/v2.0.4...v2.1.0) (2016-01-18)
+
+
+### Features
+
+* export nameToIDs function ([24ea0ca](https://github.com/router5/transition-path/commit/24ea0ca))
+
+
+
 <a name="2.0.4"></a>
 ## [2.0.4](https://github.com/router5/transition-path/compare/v2.0.3...v2.0.4) (2016-01-05)
 

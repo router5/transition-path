@@ -12,6 +12,8 @@ npm install --save router5.transition-path
 
 This module exports a `transitionPath` function which can compute the transition path between two router5 states: segments to deactivate, segments to activate and intersection node between the two.
 
+It also exports (as named exports) a `nameToIDs` function for transforming a route name to a list of segments.
+
 ```javascript
 import transitionPath from 'router5.transition-path';
 

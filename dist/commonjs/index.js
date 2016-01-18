@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.nameToIDs = nameToIDs;
 
 function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
@@ -93,4 +94,3 @@ function transitionPath(toState, fromState) {
 }
 
 exports.default = transitionPath;
-module.exports = exports['default'];
