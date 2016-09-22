@@ -1,6 +1,6 @@
 {
   "name": "router5.transition-path",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Router5 transition path helper function",
   "main": "index.js",
   "jsnext:main": "modules/index.js",
