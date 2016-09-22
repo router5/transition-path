@@ -2,5 +2,5 @@
 node_modules
 npm-debug.log
 test
-README.md
-CHANGELOG.md
+modules
+*.md

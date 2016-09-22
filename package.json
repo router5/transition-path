@@ -1,12 +1,12 @@
 {
   "name": "router5.transition-path",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Router5 transition path helper function",
-  "main": "dist/commonjs/index.js",
+  "main": "index.js",
   "jsnext:main": "modules/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && babel modules --out-dir dist/commonjs",
+    "build": "npm run clean && babel modules --out-dir ./",
     "clog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "test": "_mocha"
   },
@@ -25,14 +25,17 @@
   },
   "homepage": "https://router5.github.io",
   "devDependencies": {
-    "babel-core": "^6.9.1",
+    "babel-core": "^6.14.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015": "^6.14.0",
     "conventional-changelog": "^1.1.0",
-    "mocha": "^2.5.3",
-    "rimraf": "^2.5.2",
-    "should": "^9.0.0"
+    "mocha": "^3.0.2",
+    "rimraf": "^2.5.4",
+    "should": "^11.1.0"
+  },
+  "peerDependencies": {
+    "router5": "^4.0.0"
   }
 }
